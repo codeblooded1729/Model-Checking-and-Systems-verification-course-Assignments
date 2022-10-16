@@ -1,0 +1,113 @@
+Assignment 1: Out: Sep 18 (Friday); Due: Sep 25 (Friday)
+
+Written parts of your solution must be submitted in PDF form.  For the Z3 and NuSMV problems submit code file with liberal comments explaining your coding scheme.  Enclose any runs as appropriate.
+
+SMT Part: 50 Points
+------------------
+1. Solve the following puzzle using Z3 and an SMTLIB-2 script.   20 Points
+
+Three fellows accused of stealing make the following statements:
+(1) Myshkin: “Ulyanov did it, and Lomonosov is innocent”. 
+(2) Ulyanov: “If Myshkin is guilty, then so is Lomonosov”.
+(3) Lomonosov: “’Im innocent , but at least one of the others is guilty”.
+
+If the innocent told the truth and the guilty lied, who is guilty?  Submit your SMTLIB2 code.
+
+2. Model the transition system of the following program using SMTLIB-2.   30 Points
+
+assume 0<=x<8
+
+while (true) {
+   if (x%2 == 0):
+     x = x/2
+   else:
+     x = (x*2+1) % 8 }
+
+a. Draw the transition graph of this program. You can use either ints or
+booleans to represent the program state, as well as a representation of the
+Program Counter as an enumerated type. You must show both the program counter
+and the state in your transition diagram
+
+b. Encode the transition relation in SMTLIB2. You do not need to represent the
+Program Counter as part of the state but the resulting TS must soundly capture
+the behavior of the original system with PC. Please provide an explanation in
+clear English of how the two systems correspond. You will get 5 bonus points if
+you do use PC as well in your encoding with propositional logic encoding that
+uses only boolean variables
+
+Solve the following questions using Z3 and your encoding of the transition
+system:
+
+a) What are the possible states after three iterations?
+
+b) Prove that the program reaches a fixed point, i.e., values of the variables
+other than the PC does not change, after 5 iterations. What are the possible
+fixed points?
+
+NuSMV Part: 50 Points
+---------------------
+1. There are two traffic lights at an intersection. Model the traffic lights as
+synchronous NuSMV processes. Each light has the states {red,green,yellow}.  20 Points
+
+You must ensure that
+
+a) Both lights can't be green at the same time
+b) Each light must cycle through each of their states infinitely often
+c) Each light must become yellow before transitioning from green to red
+or vice versa
+
+Write both LTL and CTL specifications for these requirements, and verify
+them using NuSMV.
+
+2.  Model mutual exclusion for asynchronous processes in NuSMV using Peterson's
+mutual exclusion algorithm  30 Points
+
+In the Peterson's algorithm, there are two flags, flag_0 and flag_1. flag_i indicates
+that process i wants to enter the critical section. 
+
+There is another variable, 'turn'. Each process sets the turn to the other
+process at the start, so that the other process is given priority. A process
+enters the critical section if it is its own turn, or the other process doesn't
+want to enter the critical secion
+
+MODULE main
+VAR
+  flag0     : boolean;
+  flag1     : boolean;
+  turn      : {zero, one};
+  proc0     : process user(zero, one, turn, flag0, flag1);
+  proc1     : process user(one, zero, turn, flag1, flag0);
+ASSIGN
+  init(flag0) := FALSE;
+  init(flag1) := FALSE;
+
+MODULE user(this_id, other_id, turn, this_flag, other_flag)
+  VAR state : {idle, entering, waiting, critical, exiting};
+ASSIGN
+  ... -- Fill this in
+
+The NuSMV process user(this_id, other_id, turn, this_flag, other_flag) must model the
+following program:
+
+loop forever:
+  -- idle
+  ...
+  -- entering
+  turn = other_id
+  this_flag = true
+  -- waiting
+  wait until (turn = this_id || !other_flag)
+  -- critical
+  ...
+  -- exiting
+  this_flag = false
+end loop
+
+The comments co-relate the program counter with the given NuSMV states. The
+program statements listed between two states must execute automically whenever
+the state transitions from the first state to the second.
+
+After modelling this example, verify the following properties in NuSMV using an LTL specification:
+
+a) Mutual Exclusion: Both processes cannot be in the critical section at the same time
+b) Starvation Freedom: Whenever a process tries to enter the critical section, it eventually succeeds after specifying appropriate fairness constraints, as required.

@@ -1,0 +1,36 @@
+MODULE main
+VAR
+  flag0     : boolean;
+  flag1     : boolean;
+  turn      : {zero, one};
+  proc0     : process user(zero, one, turn, flag0, flag1);
+  proc1     : process user(one, zero, turn, flag1, flag0);
+ASSIGN
+  init(flag0) := FALSE;
+  init(flag1) := FALSE;
+LTLSPEC G!(proc0.state=critical&proc1.state=critical)
+LTLSPEC (G (proc0.state = entering -> F proc0.state = critical))&(G (proc1.state = entering -> F proc1.state = critical))
+MODULE user(this_id, other_id, turn, this_flag, other_flag)
+  VAR state : {idle, entering, waiting, critical, exiting};
+
+ASSIGN
+  init(state):=idle;
+  next(state):=case
+                 state=idle                                 :entering;
+				 state=entering                             :waiting;
+				 state=waiting&!(turn=this_id | !other_flag):waiting;
+				 state=waiting&(turn=this_id | !other_flag) :critical;
+				 state=critical                             :exiting;
+				 state=exiting                              :idle;
+			esac;
+  next(turn):= case
+                 state=entering                             :other_id;
+				 TRUE                                       :turn;
+			esac;
+  next(this_flag):= case
+                state=entering                              :TRUE;
+				state=exiting                               :FALSE;
+				TRUE                                        :this_flag;
+			esac;
+FAIRNESS
+  running

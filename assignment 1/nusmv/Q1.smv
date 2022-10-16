@@ -1,0 +1,31 @@
+MODULE main
+    VAR
+	    light1:{red,green,yellow};
+	    light2:{red,green,yellow};
+	ASSIGN
+	    init(light1):={red,green,yellow};
+		init(light2):=case
+		                  light1=green :{red,yellow};
+						  TRUE         :{red,green,yellow};
+					  esac;
+		next(light1):=case
+						 light2=yellow & light1=yellow :yellow;
+						 light2=red & light1=yellow    :red;
+						 light2=green & light1=yellow  :green;
+						 light1=red                    :yellow;
+						 light1=green                  :yellow;
+						 
+					esac;
+		next(light2):=case
+		                 light1=yellow & light2=yellow:green;
+						 light1=red & light2=yellow   :green;
+						 light1=green & light2=yellow :red;
+						 light2=red                   :yellow;
+						 light2=green                 :yellow;
+					esac;
+	SPEC  AG !(light1=green & light2=green)
+	SPEC  AG AF (light1=green) & AG AF(light1=red) & AG AF(light1=yellow) & AG AF(light2=green) & AG AF(light2=red) & AG AF(light2=green)
+	SPEC  AG !(light1=green & EX (light1=red)) & AG !(light1=red & EX (light1=green)) & AG !(light2=green & EX (light2=red)) & AG !(light2=red & EX (light2=green))
+	LTLSPEC G !(light1=green & light2=green)
+	LTLSPEC G F (light1=green) & G F(light1=red) & G F(light1=yellow) & G F(light2=green) & G F(light2=red) & G F(light2=green)
+	LTLSPEC G !(light1=green & X (light1=red)) & G !(light1=red & X (light1=green)) & G !(light2=green & X (light2=red)) & G !(light2=red & X (light2=green))

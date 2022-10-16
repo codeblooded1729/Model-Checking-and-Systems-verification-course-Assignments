@@ -1,0 +1,1535 @@
+Created by PLY version 3.10 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> formula
+Rule 1     formula -> PROP
+Rule 2     formula -> LITERAL
+Rule 3     formula -> NOT formula
+Rule 4     formula -> LPAR formula OR formula RPAR
+Rule 5     formula -> LPAR formula AND formula RPAR
+Rule 6     formula -> LPAR formula XOR formula RPAR
+Rule 7     formula -> LPAR formula IFF formula RPAR
+Rule 8     formula -> AX formula
+Rule 9     formula -> X formula
+Rule 10    formula -> AF formula
+Rule 11    formula -> F formula
+Rule 12    formula -> AG formula
+Rule 13    formula -> G formula
+Rule 14    formula -> LPAR formula AU formula RPAR
+Rule 15    formula -> LPAR formula U formula RPAR
+Rule 16    formula -> LPAR formula AR formula RPAR
+Rule 17    formula -> LPAR formula R formula RPAR
+Rule 18    formula -> EX formula
+Rule 19    formula -> EF formula
+Rule 20    formula -> EG formula
+Rule 21    formula -> LPAR formula EU formula RPAR
+Rule 22    formula -> LPAR formula ER formula RPAR
+Rule 23    formula -> LPAR formula RPAR
+
+Terminals, with rules where they appear
+
+AF                   : 10
+AG                   : 12
+AND                  : 5
+AR                   : 16
+AU                   : 14
+AX                   : 8
+EF                   : 19
+EG                   : 20
+ER                   : 22
+EU                   : 21
+EX                   : 18
+F                    : 11
+G                    : 13
+IFF                  : 7
+LITERAL              : 2
+LPAR                 : 4 5 6 7 14 15 16 17 21 22 23
+NOT                  : 3
+OR                   : 4
+PROP                 : 1
+R                    : 17
+RPAR                 : 4 5 6 7 14 15 16 17 21 22 23
+U                    : 15
+X                    : 9
+XOR                  : 6
+error                : 
+
+Nonterminals, with rules where they appear
+
+formula              : 3 4 4 5 5 6 6 7 7 8 9 10 11 12 13 14 14 15 15 16 16 17 17 18 19 20 21 21 22 22 23 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . formula
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 1
+
+state 1
+
+    (0) S' -> formula .
+
+
+
+state 2
+
+    (1) formula -> PROP .
+
+    $end            reduce using rule 1 (formula -> PROP .)
+    OR              reduce using rule 1 (formula -> PROP .)
+    AND             reduce using rule 1 (formula -> PROP .)
+    XOR             reduce using rule 1 (formula -> PROP .)
+    IFF             reduce using rule 1 (formula -> PROP .)
+    AU              reduce using rule 1 (formula -> PROP .)
+    U               reduce using rule 1 (formula -> PROP .)
+    AR              reduce using rule 1 (formula -> PROP .)
+    R               reduce using rule 1 (formula -> PROP .)
+    EU              reduce using rule 1 (formula -> PROP .)
+    ER              reduce using rule 1 (formula -> PROP .)
+    RPAR            reduce using rule 1 (formula -> PROP .)
+
+
+state 3
+
+    (2) formula -> LITERAL .
+
+    $end            reduce using rule 2 (formula -> LITERAL .)
+    OR              reduce using rule 2 (formula -> LITERAL .)
+    AND             reduce using rule 2 (formula -> LITERAL .)
+    XOR             reduce using rule 2 (formula -> LITERAL .)
+    IFF             reduce using rule 2 (formula -> LITERAL .)
+    AU              reduce using rule 2 (formula -> LITERAL .)
+    U               reduce using rule 2 (formula -> LITERAL .)
+    AR              reduce using rule 2 (formula -> LITERAL .)
+    R               reduce using rule 2 (formula -> LITERAL .)
+    EU              reduce using rule 2 (formula -> LITERAL .)
+    ER              reduce using rule 2 (formula -> LITERAL .)
+    RPAR            reduce using rule 2 (formula -> LITERAL .)
+
+
+state 4
+
+    (3) formula -> NOT . formula
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 15
+
+state 5
+
+    (4) formula -> LPAR . formula OR formula RPAR
+    (5) formula -> LPAR . formula AND formula RPAR
+    (6) formula -> LPAR . formula XOR formula RPAR
+    (7) formula -> LPAR . formula IFF formula RPAR
+    (14) formula -> LPAR . formula AU formula RPAR
+    (15) formula -> LPAR . formula U formula RPAR
+    (16) formula -> LPAR . formula AR formula RPAR
+    (17) formula -> LPAR . formula R formula RPAR
+    (21) formula -> LPAR . formula EU formula RPAR
+    (22) formula -> LPAR . formula ER formula RPAR
+    (23) formula -> LPAR . formula RPAR
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 16
+
+state 6
+
+    (8) formula -> AX . formula
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 17
+
+state 7
+
+    (9) formula -> X . formula
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 18
+
+state 8
+
+    (10) formula -> AF . formula
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 19
+
+state 9
+
+    (11) formula -> F . formula
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 20
+
+state 10
+
+    (12) formula -> AG . formula
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 21
+
+state 11
+
+    (13) formula -> G . formula
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 22
+
+state 12
+
+    (18) formula -> EX . formula
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 23
+
+state 13
+
+    (19) formula -> EF . formula
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 24
+
+state 14
+
+    (20) formula -> EG . formula
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 25
+
+state 15
+
+    (3) formula -> NOT formula .
+
+    $end            reduce using rule 3 (formula -> NOT formula .)
+    OR              reduce using rule 3 (formula -> NOT formula .)
+    AND             reduce using rule 3 (formula -> NOT formula .)
+    XOR             reduce using rule 3 (formula -> NOT formula .)
+    IFF             reduce using rule 3 (formula -> NOT formula .)
+    AU              reduce using rule 3 (formula -> NOT formula .)
+    U               reduce using rule 3 (formula -> NOT formula .)
+    AR              reduce using rule 3 (formula -> NOT formula .)
+    R               reduce using rule 3 (formula -> NOT formula .)
+    EU              reduce using rule 3 (formula -> NOT formula .)
+    ER              reduce using rule 3 (formula -> NOT formula .)
+    RPAR            reduce using rule 3 (formula -> NOT formula .)
+
+
+state 16
+
+    (4) formula -> LPAR formula . OR formula RPAR
+    (5) formula -> LPAR formula . AND formula RPAR
+    (6) formula -> LPAR formula . XOR formula RPAR
+    (7) formula -> LPAR formula . IFF formula RPAR
+    (14) formula -> LPAR formula . AU formula RPAR
+    (15) formula -> LPAR formula . U formula RPAR
+    (16) formula -> LPAR formula . AR formula RPAR
+    (17) formula -> LPAR formula . R formula RPAR
+    (21) formula -> LPAR formula . EU formula RPAR
+    (22) formula -> LPAR formula . ER formula RPAR
+    (23) formula -> LPAR formula . RPAR
+
+    OR              shift and go to state 26
+    AND             shift and go to state 28
+    XOR             shift and go to state 29
+    IFF             shift and go to state 30
+    AU              shift and go to state 31
+    U               shift and go to state 32
+    AR              shift and go to state 33
+    R               shift and go to state 34
+    EU              shift and go to state 35
+    ER              shift and go to state 36
+    RPAR            shift and go to state 27
+
+
+state 17
+
+    (8) formula -> AX formula .
+
+    $end            reduce using rule 8 (formula -> AX formula .)
+    OR              reduce using rule 8 (formula -> AX formula .)
+    AND             reduce using rule 8 (formula -> AX formula .)
+    XOR             reduce using rule 8 (formula -> AX formula .)
+    IFF             reduce using rule 8 (formula -> AX formula .)
+    AU              reduce using rule 8 (formula -> AX formula .)
+    U               reduce using rule 8 (formula -> AX formula .)
+    AR              reduce using rule 8 (formula -> AX formula .)
+    R               reduce using rule 8 (formula -> AX formula .)
+    EU              reduce using rule 8 (formula -> AX formula .)
+    ER              reduce using rule 8 (formula -> AX formula .)
+    RPAR            reduce using rule 8 (formula -> AX formula .)
+
+
+state 18
+
+    (9) formula -> X formula .
+
+    $end            reduce using rule 9 (formula -> X formula .)
+    OR              reduce using rule 9 (formula -> X formula .)
+    AND             reduce using rule 9 (formula -> X formula .)
+    XOR             reduce using rule 9 (formula -> X formula .)
+    IFF             reduce using rule 9 (formula -> X formula .)
+    AU              reduce using rule 9 (formula -> X formula .)
+    U               reduce using rule 9 (formula -> X formula .)
+    AR              reduce using rule 9 (formula -> X formula .)
+    R               reduce using rule 9 (formula -> X formula .)
+    EU              reduce using rule 9 (formula -> X formula .)
+    ER              reduce using rule 9 (formula -> X formula .)
+    RPAR            reduce using rule 9 (formula -> X formula .)
+
+
+state 19
+
+    (10) formula -> AF formula .
+
+    $end            reduce using rule 10 (formula -> AF formula .)
+    OR              reduce using rule 10 (formula -> AF formula .)
+    AND             reduce using rule 10 (formula -> AF formula .)
+    XOR             reduce using rule 10 (formula -> AF formula .)
+    IFF             reduce using rule 10 (formula -> AF formula .)
+    AU              reduce using rule 10 (formula -> AF formula .)
+    U               reduce using rule 10 (formula -> AF formula .)
+    AR              reduce using rule 10 (formula -> AF formula .)
+    R               reduce using rule 10 (formula -> AF formula .)
+    EU              reduce using rule 10 (formula -> AF formula .)
+    ER              reduce using rule 10 (formula -> AF formula .)
+    RPAR            reduce using rule 10 (formula -> AF formula .)
+
+
+state 20
+
+    (11) formula -> F formula .
+
+    $end            reduce using rule 11 (formula -> F formula .)
+    OR              reduce using rule 11 (formula -> F formula .)
+    AND             reduce using rule 11 (formula -> F formula .)
+    XOR             reduce using rule 11 (formula -> F formula .)
+    IFF             reduce using rule 11 (formula -> F formula .)
+    AU              reduce using rule 11 (formula -> F formula .)
+    U               reduce using rule 11 (formula -> F formula .)
+    AR              reduce using rule 11 (formula -> F formula .)
+    R               reduce using rule 11 (formula -> F formula .)
+    EU              reduce using rule 11 (formula -> F formula .)
+    ER              reduce using rule 11 (formula -> F formula .)
+    RPAR            reduce using rule 11 (formula -> F formula .)
+
+
+state 21
+
+    (12) formula -> AG formula .
+
+    $end            reduce using rule 12 (formula -> AG formula .)
+    OR              reduce using rule 12 (formula -> AG formula .)
+    AND             reduce using rule 12 (formula -> AG formula .)
+    XOR             reduce using rule 12 (formula -> AG formula .)
+    IFF             reduce using rule 12 (formula -> AG formula .)
+    AU              reduce using rule 12 (formula -> AG formula .)
+    U               reduce using rule 12 (formula -> AG formula .)
+    AR              reduce using rule 12 (formula -> AG formula .)
+    R               reduce using rule 12 (formula -> AG formula .)
+    EU              reduce using rule 12 (formula -> AG formula .)
+    ER              reduce using rule 12 (formula -> AG formula .)
+    RPAR            reduce using rule 12 (formula -> AG formula .)
+
+
+state 22
+
+    (13) formula -> G formula .
+
+    $end            reduce using rule 13 (formula -> G formula .)
+    OR              reduce using rule 13 (formula -> G formula .)
+    AND             reduce using rule 13 (formula -> G formula .)
+    XOR             reduce using rule 13 (formula -> G formula .)
+    IFF             reduce using rule 13 (formula -> G formula .)
+    AU              reduce using rule 13 (formula -> G formula .)
+    U               reduce using rule 13 (formula -> G formula .)
+    AR              reduce using rule 13 (formula -> G formula .)
+    R               reduce using rule 13 (formula -> G formula .)
+    EU              reduce using rule 13 (formula -> G formula .)
+    ER              reduce using rule 13 (formula -> G formula .)
+    RPAR            reduce using rule 13 (formula -> G formula .)
+
+
+state 23
+
+    (18) formula -> EX formula .
+
+    $end            reduce using rule 18 (formula -> EX formula .)
+    OR              reduce using rule 18 (formula -> EX formula .)
+    AND             reduce using rule 18 (formula -> EX formula .)
+    XOR             reduce using rule 18 (formula -> EX formula .)
+    IFF             reduce using rule 18 (formula -> EX formula .)
+    AU              reduce using rule 18 (formula -> EX formula .)
+    U               reduce using rule 18 (formula -> EX formula .)
+    AR              reduce using rule 18 (formula -> EX formula .)
+    R               reduce using rule 18 (formula -> EX formula .)
+    EU              reduce using rule 18 (formula -> EX formula .)
+    ER              reduce using rule 18 (formula -> EX formula .)
+    RPAR            reduce using rule 18 (formula -> EX formula .)
+
+
+state 24
+
+    (19) formula -> EF formula .
+
+    $end            reduce using rule 19 (formula -> EF formula .)
+    OR              reduce using rule 19 (formula -> EF formula .)
+    AND             reduce using rule 19 (formula -> EF formula .)
+    XOR             reduce using rule 19 (formula -> EF formula .)
+    IFF             reduce using rule 19 (formula -> EF formula .)
+    AU              reduce using rule 19 (formula -> EF formula .)
+    U               reduce using rule 19 (formula -> EF formula .)
+    AR              reduce using rule 19 (formula -> EF formula .)
+    R               reduce using rule 19 (formula -> EF formula .)
+    EU              reduce using rule 19 (formula -> EF formula .)
+    ER              reduce using rule 19 (formula -> EF formula .)
+    RPAR            reduce using rule 19 (formula -> EF formula .)
+
+
+state 25
+
+    (20) formula -> EG formula .
+
+    $end            reduce using rule 20 (formula -> EG formula .)
+    OR              reduce using rule 20 (formula -> EG formula .)
+    AND             reduce using rule 20 (formula -> EG formula .)
+    XOR             reduce using rule 20 (formula -> EG formula .)
+    IFF             reduce using rule 20 (formula -> EG formula .)
+    AU              reduce using rule 20 (formula -> EG formula .)
+    U               reduce using rule 20 (formula -> EG formula .)
+    AR              reduce using rule 20 (formula -> EG formula .)
+    R               reduce using rule 20 (formula -> EG formula .)
+    EU              reduce using rule 20 (formula -> EG formula .)
+    ER              reduce using rule 20 (formula -> EG formula .)
+    RPAR            reduce using rule 20 (formula -> EG formula .)
+
+
+state 26
+
+    (4) formula -> LPAR formula OR . formula RPAR
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 37
+
+state 27
+
+    (23) formula -> LPAR formula RPAR .
+
+    $end            reduce using rule 23 (formula -> LPAR formula RPAR .)
+    OR              reduce using rule 23 (formula -> LPAR formula RPAR .)
+    AND             reduce using rule 23 (formula -> LPAR formula RPAR .)
+    XOR             reduce using rule 23 (formula -> LPAR formula RPAR .)
+    IFF             reduce using rule 23 (formula -> LPAR formula RPAR .)
+    AU              reduce using rule 23 (formula -> LPAR formula RPAR .)
+    U               reduce using rule 23 (formula -> LPAR formula RPAR .)
+    AR              reduce using rule 23 (formula -> LPAR formula RPAR .)
+    R               reduce using rule 23 (formula -> LPAR formula RPAR .)
+    EU              reduce using rule 23 (formula -> LPAR formula RPAR .)
+    ER              reduce using rule 23 (formula -> LPAR formula RPAR .)
+    RPAR            reduce using rule 23 (formula -> LPAR formula RPAR .)
+
+
+state 28
+
+    (5) formula -> LPAR formula AND . formula RPAR
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 38
+
+state 29
+
+    (6) formula -> LPAR formula XOR . formula RPAR
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 39
+
+state 30
+
+    (7) formula -> LPAR formula IFF . formula RPAR
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 40
+
+state 31
+
+    (14) formula -> LPAR formula AU . formula RPAR
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 41
+
+state 32
+
+    (15) formula -> LPAR formula U . formula RPAR
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 42
+
+state 33
+
+    (16) formula -> LPAR formula AR . formula RPAR
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 43
+
+state 34
+
+    (17) formula -> LPAR formula R . formula RPAR
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 44
+
+state 35
+
+    (21) formula -> LPAR formula EU . formula RPAR
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 45
+
+state 36
+
+    (22) formula -> LPAR formula ER . formula RPAR
+    (1) formula -> . PROP
+    (2) formula -> . LITERAL
+    (3) formula -> . NOT formula
+    (4) formula -> . LPAR formula OR formula RPAR
+    (5) formula -> . LPAR formula AND formula RPAR
+    (6) formula -> . LPAR formula XOR formula RPAR
+    (7) formula -> . LPAR formula IFF formula RPAR
+    (8) formula -> . AX formula
+    (9) formula -> . X formula
+    (10) formula -> . AF formula
+    (11) formula -> . F formula
+    (12) formula -> . AG formula
+    (13) formula -> . G formula
+    (14) formula -> . LPAR formula AU formula RPAR
+    (15) formula -> . LPAR formula U formula RPAR
+    (16) formula -> . LPAR formula AR formula RPAR
+    (17) formula -> . LPAR formula R formula RPAR
+    (18) formula -> . EX formula
+    (19) formula -> . EF formula
+    (20) formula -> . EG formula
+    (21) formula -> . LPAR formula EU formula RPAR
+    (22) formula -> . LPAR formula ER formula RPAR
+    (23) formula -> . LPAR formula RPAR
+
+    PROP            shift and go to state 2
+    LITERAL         shift and go to state 3
+    NOT             shift and go to state 4
+    LPAR            shift and go to state 5
+    AX              shift and go to state 6
+    X               shift and go to state 7
+    AF              shift and go to state 8
+    F               shift and go to state 9
+    AG              shift and go to state 10
+    G               shift and go to state 11
+    EX              shift and go to state 12
+    EF              shift and go to state 13
+    EG              shift and go to state 14
+
+    formula                        shift and go to state 46
+
+state 37
+
+    (4) formula -> LPAR formula OR formula . RPAR
+
+    RPAR            shift and go to state 47
+
+
+state 38
+
+    (5) formula -> LPAR formula AND formula . RPAR
+
+    RPAR            shift and go to state 48
+
+
+state 39
+
+    (6) formula -> LPAR formula XOR formula . RPAR
+
+    RPAR            shift and go to state 49
+
+
+state 40
+
+    (7) formula -> LPAR formula IFF formula . RPAR
+
+    RPAR            shift and go to state 50
+
+
+state 41
+
+    (14) formula -> LPAR formula AU formula . RPAR
+
+    RPAR            shift and go to state 51
+
+
+state 42
+
+    (15) formula -> LPAR formula U formula . RPAR
+
+    RPAR            shift and go to state 52
+
+
+state 43
+
+    (16) formula -> LPAR formula AR formula . RPAR
+
+    RPAR            shift and go to state 53
+
+
+state 44
+
+    (17) formula -> LPAR formula R formula . RPAR
+
+    RPAR            shift and go to state 54
+
+
+state 45
+
+    (21) formula -> LPAR formula EU formula . RPAR
+
+    RPAR            shift and go to state 55
+
+
+state 46
+
+    (22) formula -> LPAR formula ER formula . RPAR
+
+    RPAR            shift and go to state 56
+
+
+state 47
+
+    (4) formula -> LPAR formula OR formula RPAR .
+
+    $end            reduce using rule 4 (formula -> LPAR formula OR formula RPAR .)
+    OR              reduce using rule 4 (formula -> LPAR formula OR formula RPAR .)
+    AND             reduce using rule 4 (formula -> LPAR formula OR formula RPAR .)
+    XOR             reduce using rule 4 (formula -> LPAR formula OR formula RPAR .)
+    IFF             reduce using rule 4 (formula -> LPAR formula OR formula RPAR .)
+    AU              reduce using rule 4 (formula -> LPAR formula OR formula RPAR .)
+    U               reduce using rule 4 (formula -> LPAR formula OR formula RPAR .)
+    AR              reduce using rule 4 (formula -> LPAR formula OR formula RPAR .)
+    R               reduce using rule 4 (formula -> LPAR formula OR formula RPAR .)
+    EU              reduce using rule 4 (formula -> LPAR formula OR formula RPAR .)
+    ER              reduce using rule 4 (formula -> LPAR formula OR formula RPAR .)
+    RPAR            reduce using rule 4 (formula -> LPAR formula OR formula RPAR .)
+
+
+state 48
+
+    (5) formula -> LPAR formula AND formula RPAR .
+
+    $end            reduce using rule 5 (formula -> LPAR formula AND formula RPAR .)
+    OR              reduce using rule 5 (formula -> LPAR formula AND formula RPAR .)
+    AND             reduce using rule 5 (formula -> LPAR formula AND formula RPAR .)
+    XOR             reduce using rule 5 (formula -> LPAR formula AND formula RPAR .)
+    IFF             reduce using rule 5 (formula -> LPAR formula AND formula RPAR .)
+    AU              reduce using rule 5 (formula -> LPAR formula AND formula RPAR .)
+    U               reduce using rule 5 (formula -> LPAR formula AND formula RPAR .)
+    AR              reduce using rule 5 (formula -> LPAR formula AND formula RPAR .)
+    R               reduce using rule 5 (formula -> LPAR formula AND formula RPAR .)
+    EU              reduce using rule 5 (formula -> LPAR formula AND formula RPAR .)
+    ER              reduce using rule 5 (formula -> LPAR formula AND formula RPAR .)
+    RPAR            reduce using rule 5 (formula -> LPAR formula AND formula RPAR .)
+
+
+state 49
+
+    (6) formula -> LPAR formula XOR formula RPAR .
+
+    $end            reduce using rule 6 (formula -> LPAR formula XOR formula RPAR .)
+    OR              reduce using rule 6 (formula -> LPAR formula XOR formula RPAR .)
+    AND             reduce using rule 6 (formula -> LPAR formula XOR formula RPAR .)
+    XOR             reduce using rule 6 (formula -> LPAR formula XOR formula RPAR .)
+    IFF             reduce using rule 6 (formula -> LPAR formula XOR formula RPAR .)
+    AU              reduce using rule 6 (formula -> LPAR formula XOR formula RPAR .)
+    U               reduce using rule 6 (formula -> LPAR formula XOR formula RPAR .)
+    AR              reduce using rule 6 (formula -> LPAR formula XOR formula RPAR .)
+    R               reduce using rule 6 (formula -> LPAR formula XOR formula RPAR .)
+    EU              reduce using rule 6 (formula -> LPAR formula XOR formula RPAR .)
+    ER              reduce using rule 6 (formula -> LPAR formula XOR formula RPAR .)
+    RPAR            reduce using rule 6 (formula -> LPAR formula XOR formula RPAR .)
+
+
+state 50
+
+    (7) formula -> LPAR formula IFF formula RPAR .
+
+    $end            reduce using rule 7 (formula -> LPAR formula IFF formula RPAR .)
+    OR              reduce using rule 7 (formula -> LPAR formula IFF formula RPAR .)
+    AND             reduce using rule 7 (formula -> LPAR formula IFF formula RPAR .)
+    XOR             reduce using rule 7 (formula -> LPAR formula IFF formula RPAR .)
+    IFF             reduce using rule 7 (formula -> LPAR formula IFF formula RPAR .)
+    AU              reduce using rule 7 (formula -> LPAR formula IFF formula RPAR .)
+    U               reduce using rule 7 (formula -> LPAR formula IFF formula RPAR .)
+    AR              reduce using rule 7 (formula -> LPAR formula IFF formula RPAR .)
+    R               reduce using rule 7 (formula -> LPAR formula IFF formula RPAR .)
+    EU              reduce using rule 7 (formula -> LPAR formula IFF formula RPAR .)
+    ER              reduce using rule 7 (formula -> LPAR formula IFF formula RPAR .)
+    RPAR            reduce using rule 7 (formula -> LPAR formula IFF formula RPAR .)
+
+
+state 51
+
+    (14) formula -> LPAR formula AU formula RPAR .
+
+    $end            reduce using rule 14 (formula -> LPAR formula AU formula RPAR .)
+    OR              reduce using rule 14 (formula -> LPAR formula AU formula RPAR .)
+    AND             reduce using rule 14 (formula -> LPAR formula AU formula RPAR .)
+    XOR             reduce using rule 14 (formula -> LPAR formula AU formula RPAR .)
+    IFF             reduce using rule 14 (formula -> LPAR formula AU formula RPAR .)
+    AU              reduce using rule 14 (formula -> LPAR formula AU formula RPAR .)
+    U               reduce using rule 14 (formula -> LPAR formula AU formula RPAR .)
+    AR              reduce using rule 14 (formula -> LPAR formula AU formula RPAR .)
+    R               reduce using rule 14 (formula -> LPAR formula AU formula RPAR .)
+    EU              reduce using rule 14 (formula -> LPAR formula AU formula RPAR .)
+    ER              reduce using rule 14 (formula -> LPAR formula AU formula RPAR .)
+    RPAR            reduce using rule 14 (formula -> LPAR formula AU formula RPAR .)
+
+
+state 52
+
+    (15) formula -> LPAR formula U formula RPAR .
+
+    $end            reduce using rule 15 (formula -> LPAR formula U formula RPAR .)
+    OR              reduce using rule 15 (formula -> LPAR formula U formula RPAR .)
+    AND             reduce using rule 15 (formula -> LPAR formula U formula RPAR .)
+    XOR             reduce using rule 15 (formula -> LPAR formula U formula RPAR .)
+    IFF             reduce using rule 15 (formula -> LPAR formula U formula RPAR .)
+    AU              reduce using rule 15 (formula -> LPAR formula U formula RPAR .)
+    U               reduce using rule 15 (formula -> LPAR formula U formula RPAR .)
+    AR              reduce using rule 15 (formula -> LPAR formula U formula RPAR .)
+    R               reduce using rule 15 (formula -> LPAR formula U formula RPAR .)
+    EU              reduce using rule 15 (formula -> LPAR formula U formula RPAR .)
+    ER              reduce using rule 15 (formula -> LPAR formula U formula RPAR .)
+    RPAR            reduce using rule 15 (formula -> LPAR formula U formula RPAR .)
+
+
+state 53
+
+    (16) formula -> LPAR formula AR formula RPAR .
+
+    $end            reduce using rule 16 (formula -> LPAR formula AR formula RPAR .)
+    OR              reduce using rule 16 (formula -> LPAR formula AR formula RPAR .)
+    AND             reduce using rule 16 (formula -> LPAR formula AR formula RPAR .)
+    XOR             reduce using rule 16 (formula -> LPAR formula AR formula RPAR .)
+    IFF             reduce using rule 16 (formula -> LPAR formula AR formula RPAR .)
+    AU              reduce using rule 16 (formula -> LPAR formula AR formula RPAR .)
+    U               reduce using rule 16 (formula -> LPAR formula AR formula RPAR .)
+    AR              reduce using rule 16 (formula -> LPAR formula AR formula RPAR .)
+    R               reduce using rule 16 (formula -> LPAR formula AR formula RPAR .)
+    EU              reduce using rule 16 (formula -> LPAR formula AR formula RPAR .)
+    ER              reduce using rule 16 (formula -> LPAR formula AR formula RPAR .)
+    RPAR            reduce using rule 16 (formula -> LPAR formula AR formula RPAR .)
+
+
+state 54
+
+    (17) formula -> LPAR formula R formula RPAR .
+
+    $end            reduce using rule 17 (formula -> LPAR formula R formula RPAR .)
+    OR              reduce using rule 17 (formula -> LPAR formula R formula RPAR .)
+    AND             reduce using rule 17 (formula -> LPAR formula R formula RPAR .)
+    XOR             reduce using rule 17 (formula -> LPAR formula R formula RPAR .)
+    IFF             reduce using rule 17 (formula -> LPAR formula R formula RPAR .)
+    AU              reduce using rule 17 (formula -> LPAR formula R formula RPAR .)
+    U               reduce using rule 17 (formula -> LPAR formula R formula RPAR .)
+    AR              reduce using rule 17 (formula -> LPAR formula R formula RPAR .)
+    R               reduce using rule 17 (formula -> LPAR formula R formula RPAR .)
+    EU              reduce using rule 17 (formula -> LPAR formula R formula RPAR .)
+    ER              reduce using rule 17 (formula -> LPAR formula R formula RPAR .)
+    RPAR            reduce using rule 17 (formula -> LPAR formula R formula RPAR .)
+
+
+state 55
+
+    (21) formula -> LPAR formula EU formula RPAR .
+
+    $end            reduce using rule 21 (formula -> LPAR formula EU formula RPAR .)
+    OR              reduce using rule 21 (formula -> LPAR formula EU formula RPAR .)
+    AND             reduce using rule 21 (formula -> LPAR formula EU formula RPAR .)
+    XOR             reduce using rule 21 (formula -> LPAR formula EU formula RPAR .)
+    IFF             reduce using rule 21 (formula -> LPAR formula EU formula RPAR .)
+    AU              reduce using rule 21 (formula -> LPAR formula EU formula RPAR .)
+    U               reduce using rule 21 (formula -> LPAR formula EU formula RPAR .)
+    AR              reduce using rule 21 (formula -> LPAR formula EU formula RPAR .)
+    R               reduce using rule 21 (formula -> LPAR formula EU formula RPAR .)
+    EU              reduce using rule 21 (formula -> LPAR formula EU formula RPAR .)
+    ER              reduce using rule 21 (formula -> LPAR formula EU formula RPAR .)
+    RPAR            reduce using rule 21 (formula -> LPAR formula EU formula RPAR .)
+
+
+state 56
+
+    (22) formula -> LPAR formula ER formula RPAR .
+
+    $end            reduce using rule 22 (formula -> LPAR formula ER formula RPAR .)
+    OR              reduce using rule 22 (formula -> LPAR formula ER formula RPAR .)
+    AND             reduce using rule 22 (formula -> LPAR formula ER formula RPAR .)
+    XOR             reduce using rule 22 (formula -> LPAR formula ER formula RPAR .)
+    IFF             reduce using rule 22 (formula -> LPAR formula ER formula RPAR .)
+    AU              reduce using rule 22 (formula -> LPAR formula ER formula RPAR .)
+    U               reduce using rule 22 (formula -> LPAR formula ER formula RPAR .)
+    AR              reduce using rule 22 (formula -> LPAR formula ER formula RPAR .)
+    R               reduce using rule 22 (formula -> LPAR formula ER formula RPAR .)
+    EU              reduce using rule 22 (formula -> LPAR formula ER formula RPAR .)
+    ER              reduce using rule 22 (formula -> LPAR formula ER formula RPAR .)
+    RPAR            reduce using rule 22 (formula -> LPAR formula ER formula RPAR .)
+
